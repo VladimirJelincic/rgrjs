@@ -1,0 +1,1 @@
+{"version":3,"sources":["server.js"],"names":[],"mappings":";;;;;;;;AAIA,IAAI,MAAI,wBAAJ;;;;;AAEJ,IAAI,GAAJ,CAAQ,kBAAQ,MAAR,CAAe,QAAf,CAAR;AACA,IAAI,MAAJ,CAAW,IAAX","file":"server-compiled.js","sourcesContent":["/**\n * Created by vladimir on 01/03/16.\n */\nimport express from \"express\";\nlet app=express();\n\napp.use(express.static('public'));\napp.listen(3000);"]}
