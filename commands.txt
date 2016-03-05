@@ -1,0 +1,3 @@
+Terminals:
+webpack -w -d
+nodemon
