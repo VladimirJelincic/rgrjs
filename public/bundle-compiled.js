@@ -6196,7 +6196,7 @@ return assign(newFn,fn);}return fn;}module.exports=deprecated; /* WEBPACK VAR IN
   !*** ./js/API.js ***!
   \*******************/ /***/function(module,exports,__webpack_require__){"use strict";Object.defineProperty(exports,"__esModule",{value:true});var _jquery=__webpack_require__( /*! jquery */161);var _ServerActions=__webpack_require__( /*! ./actions/ServerActions */163);var _ServerActions2=_interopRequireDefault(_ServerActions);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};} /**
 	 * Created by vladimir on 04/03/16.
-	 */var API={fetchLinks:function fetchLinks(){console.log("1. In API");(0,_jquery.get)("/data/links").done(function(resp){_ServerActions2.default.receivelinks(resp);});}};exports.default=API; /***/}, /* 161 */ /*!*********************************!*\
+	 */var API={fetchLinks:function fetchLinks(){console.log("1. In API");(0,_jquery.post)("/graphql",{query:'{ links {_id,title,url}}'}).done(function(resp){_ServerActions2.default.receivelinks(resp.data.links);});}};exports.default=API; /***/}, /* 161 */ /*!*********************************!*\
   !*** ./~/jquery/dist/jquery.js ***!
   \*********************************/ /***/function(module,exports,__webpack_require__){var __WEBPACK_AMD_DEFINE_ARRAY__,__WEBPACK_AMD_DEFINE_RESULT__; /* WEBPACK VAR INJECTION */(function(module){"use strict";var _typeof=typeof Symbol==="function"&&_typeof2(Symbol.iterator)==="symbol"?function(obj){return typeof obj==="undefined"?"undefined":_typeof2(obj);}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol?"symbol":typeof obj==="undefined"?"undefined":_typeof2(obj);}; /*!
 	 * jQuery JavaScript Library v2.2.1

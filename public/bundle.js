@@ -20336,8 +20336,10 @@
 	var API = {
 	    fetchLinks: function fetchLinks() {
 	        console.log("1. In API");
-	        (0, _jquery.get)("/data/links").done(function (resp) {
-	            _ServerActions2.default.receivelinks(resp);
+	        (0, _jquery.post)("/graphql", {
+	            query: '{ links {_id,title,url}}'
+	        }).done(function (resp) {
+	            _ServerActions2.default.receivelinks(resp.data.links);
 	        });
 	    }
 	};
